@@ -1,0 +1,117 @@
+@import "catppuccin.css";
+@font-face {
+  font-family: Jakarta;
+  src: url(font/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+* {
+  font-family: Jakarta;
+  color: var(--ctp-mocha-text);
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  background-color: var(--ctp-mocha-base);
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul, li, a {
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.direito {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.block {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  margin-right: 1em;
+  height: auto;
+  min-width: 100px;
+  padding: 2em;
+  border: solid 1px var(--ctp-mocha-surface1);
+  border-radius: 20px;
+}
+
+.column > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.column > h2 {
+  margin-bottom: 1em;
+}
+
+#foto {
+  border-radius: 15px;
+  object-fit: cover;
+  height: auto;
+  width: 350px;
+  aspect-ratio: 1/1;
+}
+
+#clock {
+  border: 1px solid var(--ctp-mocha-surface2);
+  border-radius: 5px;
+  padding: 10px;
+  width: fit-content;
+  font-size: 60px;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  #clock {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column {
+    margin: 0;
+  }
+
+  .block {
+    justify-content: center;
+    margin: 0;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  #foto {
+    width: 250px;
+    margin-bottom: 50px;
+  }
+}
