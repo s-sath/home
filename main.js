@@ -7,7 +7,6 @@ function setclock() {
   clock.innerText = time;
 } setInterval(setclock, 100)
 
-
 const links = document.querySelectorAll("li a");
 links.forEach(link => {
   const img = document.createElement("img");
@@ -53,4 +52,15 @@ async function updateImage() {
   image.src = imageUrl;
 }
 
-setInterval(updateImage, 2000);
+setInterval(updateImage, 5000);
+
+document.getElementById("search-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  var query = document.getElementById("search-input").value;
+  search(query);
+});
+
+function search(query) {
+  var searchUrl = "https://www.google.com/search?q=" + encodeURIComponent(query);
+  window.location.href = searchUrl;
+}

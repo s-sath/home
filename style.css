@@ -32,6 +32,7 @@ ul, li, a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 2em;
 }
 
 .direito {
@@ -41,16 +42,14 @@ ul, li, a {
 }
 
 .block {
-  margin-left: 50px;
-  display: flex;
-  flex-direction: row;
+  display: inline-flex;
+  gap: 1em;
 }
 
 .column {
-  margin-right: 1em;
   height: auto;
   min-width: 100px;
-  padding: 2em;
+  padding: 1.6em;
   border: solid 1px var(--ctp-mocha-surface1);
   border-radius: 20px;
 }
@@ -76,12 +75,45 @@ ul, li, a {
 }
 
 #clock {
-  border: 1px solid var(--ctp-mocha-surface2);
   border-radius: 5px;
-  padding: 10px;
   width: fit-content;
   font-size: 60px;
-  margin-bottom: 1em;
+  margin-bottom: 10px;
+}
+
+#search-form {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin-bottom: 20px;
+  border: 1px solid var(--ctp-mocha-surface2);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#search-input, #search-form button {
+  background: none;
+  border: none;
+}
+
+#search-form button:hover {
+  cursor: pointer;
+}
+
+#search-input {
+  font-weight: 600;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+.dick {
+  width: 20px;
+  height: auto;
 }
 
 @media screen and (max-width: 800px) {
