@@ -27,6 +27,11 @@ ul, li, a {
   list-style: none;
 }
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
 .container {
   display: flex;
   flex-direction: row;
@@ -64,6 +69,10 @@ ul, li, a {
 
 .column > h2 {
   margin-bottom: 1em;
+}
+
+.column h2:first-child {
+  text-align: center;
 }
 
 #foto {
@@ -126,13 +135,13 @@ input:focus {
     display: none;
   }
 
+  #search-form {
+    margin-bottom: 30px;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
-  }
-
-  .column {
-    margin: 0;
   }
 
   .block {
@@ -144,6 +153,5 @@ input:focus {
 
   #foto {
     width: 250px;
-    margin-bottom: 50px;
   }
 }
